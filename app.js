@@ -62,6 +62,37 @@ const planes = [
     "videoId": "5puhYt-KeBU",
     "source": 4,
     "type": "Explore"
+  },
+  {
+    "id": "water-plane",
+    "name": "Water Plane",
+    "tag": "A BOAT-SHAPED GLIDER",
+    "desc": "A boat-like nose for gentle, looping flights.",
+    "level": "Easy",
+    "videoId": "eXpa0V8c61s",
+    "source": 12,
+    "type": "Glide"
+  },
+  {
+    "id": "wilson",
+    "name": "Wilson",
+    "tag": "A SLIM NEW SHAPE",
+    "desc": "A narrow nose with wings that fan out at the back.",
+    "level": "Easy",
+    "videoId": "Fgm5Dcr2CEg",
+    "source": 53,
+    "type": "Explore"
+  },
+  {
+    "id": "arrowhead",
+    "name": "Arrowhead",
+    "tag": "TUCK THE NOSE, THEN TAKE OFF",
+    "desc": "A classic dart shape with a clever tucked-in nose.",
+    "level": "Easy",
+    "videoId": "3-IyNvisOcc",
+    "source": 58,
+    "type": "Distance",
+    "designer": "Foldable Flight"
   }
 ];
 const storageKey = 'fold-and-fly-video-completed-v1';
@@ -146,7 +177,7 @@ function renderManual() {
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             allowfullscreen></iframe>
         </div>
-        <div class="video-credit"><span>Tutorial by <a href="${sourceUrl(p)}" target="_blank" rel="noopener noreferrer">Fold ’N Fly ↗</a></span><button class="secondary" id="replay">Replay from the start</button></div>
+        <div class="video-credit"><span>Tutorial by <a href="${sourceUrl(p)}" target="_blank" rel="noopener noreferrer">Fold ’N Fly ↗</a>${p.designer ? ` · Design by ${p.designer}` : ''}</span><button class="secondary" id="replay">Replay from the start</button></div>
         <p class="video-fallback">Video not playing? <a href="${watchUrl(p)}" target="_blank" rel="noopener noreferrer">Watch this same tutorial on YouTube ↗</a></p>
       </section>
       <aside class="watch-help" aria-labelledby="watch-heading">
