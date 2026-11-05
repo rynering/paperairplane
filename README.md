@@ -1,23 +1,34 @@
 # Fold & Fly
 
-A small, responsive paper airplane field guide. Select one of six designs for illustrated, step-by-step instructions using A4 or US Letter paper.
+Six paper airplanes taught through embedded YouTube videos. Each collection preview links to the same video used on that plane's tutorial page. The earlier generated folding diagrams and written fold sequences have been removed.
 
-Includes difficulty filters, step navigation, printable guides, launch advice, and completed-plane markers saved in your browser. No account, dependencies, build step, or backend required.
+The six models are Basic Dart, The Basic, The Stable, The Buzz, Hunting Flight, and The Sprinter. Model names match the creator's tutorials. All use A4 or US Letter paper; no cutting is needed.
 
-## Preview locally
+## Local preview
 
-Run `python3 -m http.server 8000` from this directory, then visit http://localhost:8000.
+Run `python3 -m http.server 8000` in this directory and open http://localhost:8000.
 
-## GitHub Pages
+No build step or dependencies are required. The site uses relative asset paths and hash navigation for GitHub Pages project hosting.
 
-In this repository, open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, then **main** and **/ (root)**. Click **Save**. GitHub will show the published URL when deployment finishes.
+## Video sources and credits
 
-The site uses relative asset paths and hash navigation, so it works in a GitHub Pages project subdirectory. Google Fonts is optional; system fonts are used when unavailable.
+All videos are by **Fold 'N Fly**, embedded from their original YouTube uploads. This site is an independent collection, not affiliated with Fold 'N Fly.
 
-## Files
+| Model | Creator's design page | YouTube video |
+| --- | --- | --- |
+| Basic Dart | https://www.foldnfly.com/1v.html | https://www.youtube.com/watch?v=gZQI1Z_viNg |
+| The Basic | https://www.foldnfly.com/0v.html | https://www.youtube.com/watch?v=u-HKNkao6i0 |
+| The Stable | https://www.foldnfly.com/2v.html | https://www.youtube.com/watch?v=QbDUiGmxQIQ |
+| The Buzz | https://www.foldnfly.com/3v.html | https://www.youtube.com/watch?v=WB6NornyZc4 |
+| Hunting Flight | https://www.foldnfly.com/6v.html | https://www.youtube.com/watch?v=9BmrfQqrXkg |
+| The Sprinter | https://www.foldnfly.com/4v.html | https://www.youtube.com/watch?v=5puhYt-KeBU |
 
-- `index.html`: collection and page shell
-- `style.css`: responsive design and print styles
-- `app.js`: six folding guides, SVG illustrations, and browser interactions
+Preview images come from the corresponding YouTube video. Videos are not downloaded or rehosted. Embedded videos use youtube-nocookie.com, standard playback controls, fullscreen, inline mobile playback, and no autoplay. A direct YouTube link is always available when embedded playback is blocked. Video availability and ads are controlled by YouTube and the creator.
 
-The folding diagrams are simplified. Written instructions describe placement and measurements. Flight behavior varies with paper, symmetry, launch, and adjustments.
+After each fold, pause and copy what you see before continuing. Slower playback is available through the player's settings. Completion markers are saved only in the visitor's browser.
+
+## Publishing
+
+GitHub Pages deploys the `main` branch's root folder. Future commits to `main` update the live site automatically.
+
+The `style.css?v=2` and `app.js?v=2` references refresh assets from the earlier diagram-based site.
